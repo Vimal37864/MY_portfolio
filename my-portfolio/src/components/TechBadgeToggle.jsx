@@ -11,7 +11,6 @@ import {
   SiTypescript,
   SiPostman,
   SiHtml5,
-  SiCss3,
   SiFlask,
   SiFastapi,
 } from 'react-icons/si';
