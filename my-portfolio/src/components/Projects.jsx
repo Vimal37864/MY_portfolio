@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLaptopCode } from 'react-icons/fa';
+import { FaLaptopCode, FaGithub } from 'react-icons/fa';
 import projectsData from '../data/projectsData';
 
 const Projects = () => {
@@ -16,8 +16,8 @@ const Projects = () => {
             key={i}
             className="bg-gray-800/90 border border-gray-700/80 rounded-xl p-6 sm:p-7 shadow-md"
           >
-            {/* Header: Title, Subtitle, and Timeline */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+            {/* Header: Title, Subtitle, Timeline and Repository Link */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-2">
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                   {project.title}
@@ -30,7 +30,19 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="flex flex-wrap items-center gap-2">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-700/90 hover:bg-gray-600 hover:text-white text-gray-200 border border-gray-600 text-xs rounded-full font-medium transition-all shadow-sm"
+                    title="View GitHub Repository"
+                  >
+                    <FaGithub size={13} className="text-white" />
+                    <span>View Repository</span>
+                  </a>
+                )}
                 <span className="inline-block text-xs bg-gray-700/80 text-gray-300 border border-gray-600/50 px-3 py-1 rounded-full font-mono">
                   {project.period}
                 </span>

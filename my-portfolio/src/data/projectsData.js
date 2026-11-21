@@ -6,6 +6,7 @@ const projectsData = [
     subtitle: "Machine Learning & Geospatial Analytics Dashboard",
     role: "Full Stack & Machine Learning Developer",
     period: "June 2026",
+    github: "https://github.com/Vimal37864/Final-Year-Project",
     metrics: [
       { value: "3", label: "ML Models Compared" },
       { value: "Flask", label: "Prediction REST API" },
