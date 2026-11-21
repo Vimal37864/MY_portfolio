@@ -13,18 +13,18 @@ const Education = () => {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
             <h3 className="text-xl font-bold text-white">
-              Bachelor of Engineering in Electronics and Communication Engineering
+              Bachelor of Engineering (B.E.) in Computer Science and Engineering
             </h3>
             <p className="text-blue-400 font-medium text-sm mt-1">
-              PSNA College of Engineering and Technology, Dindigul
+              Dhanalakshmi Srinivasan College of Engineering and Technology
             </p>
           </div>
           <div className="sm:text-right">
             <span className="inline-block text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full font-mono">
-              2020 – 2024
+              2022 – 2026
             </span>
             <div className="text-sm font-semibold text-emerald-400 mt-1">
-              CGPA: 7.9
+              CGPA: 7.8 / 10
             </div>
           </div>
         </div>

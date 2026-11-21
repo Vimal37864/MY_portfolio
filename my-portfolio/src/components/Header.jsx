@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import profile from '../images/profile.png';
-import resumePdf from '../resume/Hariharasudhan_M_Resume.pdf';
+import profile from '../images/image.png';
+import resumePdf from '../resume/vimalbalaji_resume.pdf';
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -16,20 +16,22 @@ import TechBadgeToggle from './TechBadgeToggle';
 import Experience from './Experience';
 import Projects from './Projects';
 import Education from './Education';
+import Certifications from './Certifications';
 import Footer from './Footer';
 
-const skillTabs = ['All', 'AI & Dev Tools', 'Backend', 'Frontend', 'Databases', 'Architecture'];
+const skillTabs = ['All', 'Languages', 'Backend', 'Frontend', 'Machine Learning', 'Databases', 'Tools & Fundamentals'];
 
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredSkills = qaData.filter((item) => {
     if (activeCategory === 'All') return true;
-    if (activeCategory === 'AI & Dev Tools') return item.category.includes('AI') || item.category.includes('Tools');
-    if (activeCategory === 'Backend') return item.category.includes('Backend') || item.category.includes('Security');
-    if (activeCategory === 'Frontend') return item.category.includes('Frontend') || item.category.includes('Languages');
-    if (activeCategory === 'Databases') return item.category.includes('Databases') || item.category.includes('Reporting');
-    if (activeCategory === 'Architecture') return item.category.includes('Concepts');
+    if (activeCategory === 'Languages') return item.category.includes('Languages');
+    if (activeCategory === 'Backend') return item.category.includes('Backend');
+    if (activeCategory === 'Frontend') return item.category.includes('Frontend');
+    if (activeCategory === 'Machine Learning') return item.category.includes('Machine Learning');
+    if (activeCategory === 'Databases') return item.category.includes('Databases');
+    if (activeCategory === 'Tools & Fundamentals') return item.category.includes('Tools') || item.category.includes('Fundamentals');
     return true;
   });
 
@@ -42,42 +44,42 @@ const Header = () => {
           <div className='profile-img flex items-start justify-between'>
             <img
               src={profile}
-              alt="Hariharasudhan M"
+              alt="Vimal Balaji V R"
               className="w-36 h-36 md:w-44 md:h-44 object-cover rounded-full border-4 border-gray-800 shadow-xl"
             />
           </div>
 
           <div className="name text-3xl md:text-4xl font-bold font-sans mt-5 tracking-tight text-white">
-            Hariharasudhan M
+            Vimal Balaji V R
           </div>
 
           <div className="role font-medium text-blue-400 text-lg md:text-xl mt-1 tracking-wide">
-            Full Stack Developer | Java · Spring Boot · React.js
+            Full Stack Developer | Python · React.js · Flask · MySQL
           </div>
 
           {/* Professional Summary */}
           <div className='about mt-4 text-gray-300 leading-relaxed max-w-4xl text-sm md:text-base'>
-            Full Stack Developer specializing in Java, Spring Boot, and React.js, with experience delivering two production-grade enterprise applications end-to-end — from system design through deployment. Skilled in microservices, event-driven architecture with Apache Kafka, and secure RESTful API development using Spring Security and JWT. Comfortable working across the stack, including OLAP analytics with ClickHouse and responsive UI development with Tailwind CSS, with a track record of measurable performance and efficiency gains.
+            Computer Science graduate (B.E., 2026) with hands-on experience developing full-stack web applications and machine learning models using Python, Flask, React.js, and MySQL. Experienced in developing RESTful APIs, building interactive web applications, and training machine learning classifiers, including Random Forest and XGBoost. Completed an internship at Besant Technologies, applying Python programming and object-oriented programming concepts to practical development tasks.
           </div>
 
           {/* Contact Details */}
           <div className="contact-info mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-300">
             <div className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-blue-400 shrink-0" />
-              <span>Madurai, Tamil Nadu</span>
+              <span>Chennai, Tamil Nadu</span>
             </div>
 
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="text-blue-400 shrink-0" />
-              <a href="tel:+919345293334" className="hover:text-blue-300 transition-colors">
-                +91-9345293334
+              <a href="tel:+919025320645" className="hover:text-blue-300 transition-colors">
+                +91-9025320645
               </a>
             </div>
 
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-blue-400 shrink-0" />
-              <a href="mailto:hariharasudhan.magudeeswaran@gmail.com" className="text-blue-300 hover:underline">
-                hariharasudhan.magudeeswaran@gmail.com
+              <a href="mailto:vimalbalajivr@gmail.com" className="text-blue-300 hover:underline">
+                vimalbalajivr@gmail.com
               </a>
             </div>
           </div>
@@ -85,7 +87,7 @@ const Header = () => {
           {/* Call-to-Action Buttons */}
           <div className="cta-buttons mt-5 flex flex-wrap gap-3">
             <a
-              href="https://www.linkedin.com/in/harie2712"
+              href="https://linkedin.com/in/vimalbalaji27"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md flex items-center gap-2 text-sm transition-colors shadow-sm"
@@ -95,7 +97,7 @@ const Header = () => {
             </a>
 
             <a
-              href="https://github.com/Hariee-Dev"
+              href="https://github.com/Vimal37864"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 text-white font-medium py-2 px-4 rounded-md flex items-center gap-2 text-sm transition-colors shadow-sm"
@@ -106,7 +108,7 @@ const Header = () => {
 
             <a
               href={resumePdf}
-              download="Hariharasudhan_M_Resume.pdf"
+              download="vimalbalaji_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 text-gray-200 hover:text-white font-medium py-2 px-4 rounded-md text-sm transition-colors shadow-sm inline-flex items-center gap-2"
@@ -208,6 +210,11 @@ const Header = () => {
           </h2>
           <Experience />
         </div>
+
+        <hr className='mt-12 border-gray-800' />
+
+        {/* Certifications Section */}
+        <Certifications />
 
         <hr className='mt-12 border-gray-800' />
 

@@ -2,48 +2,39 @@ import React, { useState } from 'react';
 import {
   FaReact,
   FaGithub,
-  FaJava,
+  FaPython,
 } from 'react-icons/fa';
 import {
-  SiSpringboot,
   SiTailwindcss,
   SiMysql,
-  SiSpringsecurity,
-  SiApachekafka,
-  SiDocker,
-  SiClickhouse,
   SiJavascript,
+  SiTypescript,
   SiPostman,
-  SiBootstrap,
   SiHtml5,
-  SiAnthropic,
-  SiOpenai,
-  SiGooglegemini,
+  SiCss3,
+  SiFlask,
+  SiFastapi,
 } from 'react-icons/si';
 import { TbSql } from 'react-icons/tb';
+import { BsStars } from 'react-icons/bs';
 
 const TechBadgeToggle = () => {
   const [showList, setShowList] = useState(false);
 
   const techStack = [
-    { name: 'Java', icon: FaJava, color: '#f97316' },
-    { name: 'Spring Boot', icon: SiSpringboot, color: '#22c55e' },
+    { name: 'Python', icon: FaPython, color: '#3776ab' },
     { name: 'React.js', icon: FaReact, color: '#38bdf8' },
-    { name: 'Claude Code', icon: SiAnthropic, color: '#d97706' },
-    { name: 'OpenAI Codex', icon: SiOpenai, color: '#10a37f' },
-    { name: 'Google Stitch', icon: SiGooglegemini, color: '#4285f4' },
-    { name: 'Apache Kafka', icon: SiApachekafka, color: '#f43f5e' },
+    { name: 'Flask', icon: SiFlask, color: '#e2e8f0' },
+    { name: 'FastAPI', icon: SiFastapi, color: '#05998b' },
     { name: 'MySQL', icon: SiMysql, color: '#0ea5e9' },
-    { name: 'ClickHouse', icon: SiClickhouse, color: '#eab308' },
-    { name: 'Spring Security', icon: SiSpringsecurity, color: '#10b981' },
     { name: 'JavaScript', icon: SiJavascript, color: '#facc15' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#3178c6' },
     { name: 'SQL', icon: TbSql, color: '#14b8a6' },
+    { name: 'HTML5 & CSS3', icon: SiHtml5, color: '#ea580c' },
     { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06b6d4' },
-    { name: 'Bootstrap', icon: SiBootstrap, color: '#a855f7' },
-    { name: 'Docker', icon: SiDocker, color: '#3b82f6' },
+    { name: 'Machine Learning', icon: BsStars, color: '#f59e0b' },
     { name: 'Postman', icon: SiPostman, color: '#f97316' },
     { name: 'Git & GitHub', icon: FaGithub, color: '#94a3b8' },
-    { name: 'HTML5 & CSS3', icon: SiHtml5, color: '#ea580c' },
   ];
 
   return (
