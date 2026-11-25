@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
@@ -23,6 +24,38 @@
       "destination": {
         "service": "frontend"
       }
+=======
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/api",
+      "dest": "api/index.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html"
+>>>>>>> Stashed changes
     }
   ]
 }
